@@ -1,0 +1,73 @@
+{
+  "tadFileFormatVersion": 2,
+  "contents": {
+    "targetPath": "/Users/karthik/Documents/Codebase/Airports/codebeautify.csv",
+    "viewParams": {
+      "aggMap": {},
+      "columnFormats": {},
+      "defaultFormats": {
+        "boolean": {
+          "commas": true,
+          "decimalPlaces": 0,
+          "exponential": false,
+          "type": "NumFormatOptions"
+        },
+        "integer": {
+          "commas": true,
+          "decimalPlaces": 0,
+          "exponential": false,
+          "type": "NumFormatOptions"
+        },
+        "real": {
+          "commas": true,
+          "decimalPlaces": 2,
+          "exponential": false,
+          "type": "NumFormatOptions"
+        },
+        "text": {
+          "type": "TextFormatOptions",
+          "urlsAsHyperlinks": true
+        }
+      },
+      "displayColumns": [
+        "icao",
+        "iata",
+        "name",
+        "city",
+        "state",
+        "country",
+        "elevation",
+        "lat",
+        "lon",
+        "tz",
+        "Rec"
+      ],
+      "filterExp": {
+        "expType": "FilterExp",
+        "op": "AND",
+        "opArgs": [
+          {
+            "expType": "BinRelExp",
+            "lhs": {
+              "colName": "iata",
+              "expType": "ColRef"
+            },
+            "op": "NOTCONTAINS",
+            "rhs": {
+              "expType": "ConstVal",
+              "val": "Nan"
+            }
+          }
+        ]
+      },
+      "openPaths": {
+        "_rep": {}
+      },
+      "pivotLeafColumn": null,
+      "showHiddenCols": false,
+      "showRoot": false,
+      "sortKey": [],
+      "vpivots": []
+    }
+  }
+}
